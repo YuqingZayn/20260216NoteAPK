@@ -1,0 +1,21 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "待办事项 - 本地 APK 版",
+  "capacitor": {
+    "android": {
+      "path": "android"
+    }
+  },
+  "scripts": {
+    "copy:www": "node -e \"const fs=require('fs');['index.html','styles.css','app.js'].forEach(f=>fs.copyFileSync(f,'www/'+f));\"",
+    "cap:sync": "npm run copy:www && npx cap sync",
+    "cap:open:android": "npx cap open android",
+    "build:apk": "npm run cap:sync && npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0"
+  }
+}

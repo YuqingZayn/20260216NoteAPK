@@ -1,0 +1,8 @@
+{
+  "appId": "com.todoapp.todo",
+  "appName": "待办事项",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

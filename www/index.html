@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待办事项 · Todo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">
+        <span class="title-icon">✓</span>
+        待办事项
+      </h1>
+      <p class="subtitle">专注当下，高效完成任务</p>
+    </header>
+
+    <main class="main">
+      <div class="card">
+        <div class="add-todo">
+          <div class="add-todo-row">
+            <input
+              type="text"
+              id="todo-input"
+              class="todo-input"
+              placeholder="添加新待办，按 Enter 确认"
+              autocomplete="off"
+              maxlength="200"
+              aria-label="添加待办事项"
+            >
+            <button type="button" id="add-btn" class="add-btn" aria-label="添加">
+              <span class="add-icon">+</span>
+            </button>
+          </div>
+          <div class="priority-selector" aria-label="优先级">
+            <span class="priority-label">优先级：</span>
+            <button type="button" class="priority-btn" data-priority="1" title="1 级 - 紧急">1</button>
+            <button type="button" class="priority-btn" data-priority="2" title="2 级 - 高">2</button>
+            <button type="button" class="priority-btn active" data-priority="3" title="3 级 - 中">3</button>
+            <button type="button" class="priority-btn" data-priority="4" title="4 级 - 低">4</button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="filter-group">
+            <button type="button" class="filter-btn active" data-filter="all">全部</button>
+            <button type="button" class="filter-btn" data-filter="active">未完成</button>
+            <button type="button" class="filter-btn" data-filter="completed">已完成</button>
+          </div>
+          <div class="sort-group">
+            <select id="sort-select" class="sort-select" aria-label="排序方式">
+              <option value="newest">最新优先</option>
+              <option value="oldest">最早优先</option>
+            </select>
+          </div>
+        </div>
+
+        <ul id="todo-list" class="todo-list" role="list">
+          <!-- 待办项动态渲染 -->
+        </ul>
+
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">📋</div>
+          <p class="empty-text">暂无待办，添加一个开始吧</p>
+          <p class="empty-hint">点击上方输入框或按 Enter 快速添加</p>
+        </div>
+
+        <footer class="footer">
+          <span id="stats" class="stats">共 0 项，已完成 0 项</span>
+          <button type="button" id="clear-completed" class="clear-btn">清空已完成</button>
+        </footer>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>数据保存在本地，刷新不丢失</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
