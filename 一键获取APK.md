@@ -4,40 +4,36 @@
 
 ## 步骤（约 3 分钟）
 
-### 1. 创建 GitHub 仓库
+### 1. 创建 GitHub 仓库（如已创建可跳过）
 
 1. 打开 https://github.com/new  
-2. 仓库名可填 `todo-app`  
+2. 仓库名填 `20260216NoteAPK`  
 3. 选择 **Public**  
 4. 不要勾选 README（项目已有）  
 5. 点击 **Create repository**
 
 ### 2. 推送代码
 
-在 `todo-app` 目录下打开终端，依次执行（**不要复制 \`\`\`bash**，只复制下面的命令）：
+在 `todo-app` 目录下打开 PowerShell，从下面逐行复制命令执行（每行复制后粘贴到 PowerShell 回车）。
 
-**首次使用 Git 需先配置（只需一次）：**
-```
-git config --global user.email "你的邮箱@example.com"
-git config --global user.name "你的名字"
-```
+**注意：如果看到 \`\`\`powershell 或 \`\`\` 这样的符号，不要复制，那是文档格式。**
 
-**推送代码：**
-```
+git config --global user.email "1961647257zzp@gmail.com"
+git config --global user.name "YuqingZayn"
+cd e:\20260216cursor_trying\todo-app
 git init
 git add .
 git commit -m "待办事项应用"
 git branch -M main
 git remote remove origin
-git remote add origin https://github.com/你的用户名/你的仓库名.git
+git remote add origin https://github.com/YuqingZayn/20260216NoteAPK.git
 git push -u origin main
-```
 
-（将 `你的用户名` 和 `你的仓库名` 替换为实际的 GitHub 用户名和仓库名）
+（若 push 时要求登录，选择浏览器登录或使用 Personal Access Token 作为密码）
 
 ### 3. 触发构建并下载 APK
 
-1. 进入你的 GitHub 仓库页面  
+1. 打开 https://github.com/YuqingZayn/20260216NoteAPK  
 2. 点击上方 **Actions**  
 3. 左侧选择 **构建 APK**  
 4. 点击右侧 **Run workflow** → **Run workflow**  
